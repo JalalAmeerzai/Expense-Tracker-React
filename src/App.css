@@ -24,9 +24,17 @@ body {
   width: 350px;
 }
 
+.balance-title{
+  float: left;
+}
+
 h1 {
   letter-spacing: 1px;
   margin: 0;
+}
+
+h2{
+  text-align: center;
 }
 
 h3 {
@@ -50,7 +58,7 @@ h4 {
 }
 
 .inc-exp-container > div {
-  flex: 1;
+  flex:1;
   text-align: center;
 }
 
