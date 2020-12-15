@@ -1,8 +1,11 @@
 import './App.css';
+import { Header } from './components/Header.js'
 
 function App() {
   return (
-    <p>ddd</p>
+    <div>
+      <Header title="Expense Tracker" />
+    </div>
   );
 }
 
