@@ -1,8 +1,13 @@
 import { createContext, useReducer } from 'react'
 import AppReducer from './AppReducer'
+import { getLocalTransactions } from './LocalStorage'
 
+
+//setting up initial state
 const initialState = {
-    transactions: []
+    transactions: [
+        ...getLocalTransactions()
+    ]
 }
 
 export const GlobalContext = createContext(initialState)
@@ -15,6 +20,8 @@ export const GlobalProvider = ({ children }) => {
             type: 'DELETE_TRANSACTION',
             payload: id
         });
+
+        
     }
 
     const addTransaction = (transactions) => {

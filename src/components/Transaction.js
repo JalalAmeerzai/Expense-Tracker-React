@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from '../Context/GlobalState'
+import { deleteLocalTransaction } from '../Context/LocalStorage'
 
 export const Transaction = ({ transaction }) => {
     const { deleteTransaction } = useContext(GlobalContext)
@@ -8,7 +9,7 @@ export const Transaction = ({ transaction }) => {
 
     return (
         <li className={transaction.amount < 0 ? 'minus' : 'plus'}>
-            { transaction.text } <span>{ sign } Rs. { Math.abs(transaction.amount) }</span><button onClick = { () => deleteTransaction(transaction.id) } className="delete-btn">x</button>
+            { transaction.text} <span>{sign} Rs. {Math.abs(transaction.amount)}</span><button onClick={() => { deleteTransaction(transaction.id); deleteLocalTransaction(transaction.id) } } className="delete-btn">x</button>
         </li>
     )
 }
