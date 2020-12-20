@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react'
-import { GlobalContext } from "../Context/GlobalState";
-import { addLocalTransaction } from '../Context/LocalStorage'
+import { GlobalContext } from "../context/GlobalState";
+import { addLocalTransaction } from '../utils/LocalStorage'
 
 export const AddTransaction = () => {
 

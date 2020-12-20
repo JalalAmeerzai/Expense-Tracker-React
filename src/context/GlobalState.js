@@ -1,6 +1,6 @@
 import { createContext, useReducer } from 'react'
 import AppReducer from './AppReducer'
-import { getLocalTransactions } from './LocalStorage'
+import { getLocalTransactions } from '../utils/LocalStorage'
 
 
 //setting up initial state

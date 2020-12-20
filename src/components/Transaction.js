@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import { GlobalContext } from '../Context/GlobalState'
-import { deleteLocalTransaction } from '../Context/LocalStorage'
+import { GlobalContext } from '../context/GlobalState'
+import { deleteLocalTransaction } from '../utils/LocalStorage'
 
 export const Transaction = ({ transaction }) => {
     const { deleteTransaction } = useContext(GlobalContext)
